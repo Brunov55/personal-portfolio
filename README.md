@@ -16,5 +16,3 @@ Abre el artivo `index.html` para visualizar el portafolio en tu navegador.
 - HTML5
 - CSS3 (con variables y media queries para responsividad)
 
----
-© 2025 Bruno Alexis Victoria Velázquez. Todos los derechos reservados. 
