@@ -5,27 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre mi</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="aboutme.css">
 </head>
 <body>
     <header>
-        <nav class="header_nav">
-            <ul class="header_nav_lista">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutme.html">Sobre mi</a></li>
-                <li><a href="curriculum.html">Curriculum</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-            </ul>
+        <nav class="header_nav" aria-label="Principal">
+            <div class="header_brand">
+                <a href="index.html" class="site_brand" aria-label="Inicio"><span>Bruno's</span> <strong>Portfolio</strong></a>
+            </div>
+            <div class="header_links_wrapper">
+                <ul class="header_nav_lista" id="navMenu" role="list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="nav_link_active" href="aboutme.html" aria-current="page">Sobre mi</a></li>
+                    <li><a href="curriculum.html">Curriculum</a></li>
+                </ul>
+            </div>
+            <div class="header_actions">
+                <button class="theme_toggle_btn" id="themeToggle" type="button" aria-live="polite" aria-label="Cambiar tema">🌙 <span class="toggle_text">Oscuro</span></button>
+                <button class="mobile_menu_toggle" id="mobileMenuToggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="hamburger_line"></span>
+                    <span class="hamburger_line"></span>
+                    <span class="hamburger_line"></span>
+                </button>
+            </div>
         </nav>
     </header>
     <main class="presentacion">
         <section class="presentacion_contenido">
             <h1 class="presentacion_contenido_titulo titulo_destacado">Sobre mi:</h1>
-            <p class="presentacion_contenido_descripcion">Químico en formación enfocado en bioinformática y desarrollo full-stack. En proceso de crear herramientas en C++ / Python para análisis estructural de proteínas. Así como la creación de paginas web respaldado por certificación en diseño web responsivo. Experiencia en materiales y electroquímica. Busco fusionar ciencia y código para agilizar la investigación y compartir conocimiento abierto.</p>       
+            <p class="presentacion_contenido_descripcion">Químico en formación enfocado en bioinformática y desarrollo full-stack. En proceso de crear herramientas en C++ para análisis estructural de proteínas. Así como la creación de paginas web respaldado por certificación en diseño web responsivo. Experiencia en materiales y electroquímica. Busco fusionar ciencia y código para agilizar la investigación y compartir conocimiento abierto.</p>       
         </section> 
             <img src="assets/Electrochemistry.jpg" alt="Imagen de laboratorio" class="presentacion_imagen_sobre_mi">
     </main>
     <footer class="footer">
         <p>Desarrollado por Bruno Victoria</p>
     </footer>
+    <script src="theme.js" defer></script>
 </body>
 </html>

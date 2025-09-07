@@ -5,16 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio - Bruno</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
-        <nav class="header_nav">
-            <ul class="header_nav_lista">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutme.html">Sobre mi</a></li>
-                <li><a href="curriculum.html">Curriculum</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-            </ul>
+        <nav class="header_nav" aria-label="Principal">
+            <div class="header_brand">
+                <a href="index.html" class="site_brand" aria-label="Inicio"><span>Bruno's</span> <strong>Portfolio</strong></a>
+            </div>
+            <div class="header_links_wrapper">
+                <ul class="header_nav_lista" id="navMenu" role="list">
+                    <li><a class="nav_link_active" href="index.html">Home</a></li>
+                    <li><a href="aboutme.html">Sobre mi</a></li>
+                    <li><a href="curriculum.html">Curriculum</a></li>
+                </ul>
+            </div>
+            <div class="header_actions">
+                <button class="theme_toggle_btn" id="themeToggle" type="button" aria-live="polite" aria-label="Cambiar tema">🌙 <span class="toggle_text">Oscuro</span></button>
+                <button class="mobile_menu_toggle" id="mobileMenuToggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false">
+                    <span class="hamburger_line"></span>
+                    <span class="hamburger_line"></span>
+                    <span class="hamburger_line"></span>
+                </button>
+            </div>
         </nav>
     </header>
     <main class="presentacion">
@@ -23,7 +36,7 @@
             <p class="presentacion_contenido_descripcion">Explora mis proyectos, experimentos y recursos donde combino creatividad, ciencia y tecnología. Aquí encontrarás ejemplos de desarrollo web, aplicaciones científicas y colaboraciones multidisciplinarias. ¡Descubre cómo la curiosidad y la innovación guían mi trabajo!</p>       
             <div class="presentacion_contenido_redes">
                 <h2 class="presentacion_contenido_redes_titulo">Accede a mis redes:</h2>
-                <a href="https://www.instagram.com/teamojulettcasateconmigoo/" class="presentacion_contenido_link"><img src="assets/instagram.png" alt="Instagram" class="presentacion_contenido_link_imagen">Instagram</a>
+                <a href="https://wa.me/1234567890" class="presentacion_contenido_link"><img src="assets/whatsapp.svg" alt="WhatsApp" class="presentacion_contenido_link_imagen">WhatsApp</a>
                 <a href="https://github.com/Brunov55" class="presentacion_contenido_link"><img src="assets/github.png" alt="Github" class="presentacion_contenido_link_imagen">Github</a>
                 <a href="https://www.linkedin.com/in/brunov55/" class="presentacion_contenido_link"><img src="assets/linkedin.png" alt="LinkedIn" class="presentacion_contenido_link_imagen">LinkedIn</a>
             </div>
@@ -33,5 +46,6 @@
     <footer class="footer">
         <p>Desarrollado por Bruno Victoria</p>
     </footer>
+    <script src="theme.js" defer></script>
 </body>
 </html>

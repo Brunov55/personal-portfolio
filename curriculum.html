@@ -5,16 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículum - Bruno Alexis Victoria Velázquez</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="curriculum.css">
 </head>
 <body>
     <header>
-        <nav class="header_nav">
-            <ul class="header_nav_lista">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutme.html">Sobre mi</a></li>
-                <li><a href="curriculum.html">Curriculum</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-            </ul>
+        <nav class="header_nav" aria-label="Principal">
+            <div class="header_brand">
+                <a href="index.html" class="site_brand" aria-label="Inicio"><span>Bruno's</span> <strong>Portfolio</strong></a>
+            </div>
+            <div class="header_links_wrapper">
+                <ul class="header_nav_lista" id="navMenu" role="list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutme.html">Sobre mi</a></li>
+                    <li><a class="nav_link_active" href="curriculum.html" aria-current="page">Curriculum</a></li>
+                </ul>
+            </div>
+            <div class="header_actions">
+                <button class="theme_toggle_btn" id="themeToggle" type="button" aria-live="polite" aria-label="Cambiar tema">🌙 <span class="toggle_text">Oscuro</span></button>
+                <button class="mobile_menu_toggle" id="mobileMenuToggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="hamburger_line"></span>
+                    <span class="hamburger_line"></span>
+                    <span class="hamburger_line"></span>
+                </button>
+            </div>
         </nav>
     </header>
     <main class="curriculum_flex">
@@ -26,18 +39,36 @@
                 <p><strong>Email:</strong> <a href="mailto:brunovv158@gmail.com">brunovv158@gmail.com</a></p>
                 <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/brunov55" target="_blank">www.linkedin.com/in/brunov55</a></p></p>
                 <p><strong>GitHub:</strong> <a href="https://github.com/Brunov55" target="_blank">https://github.com/Brunov55</a></p>
+                <div class="skill_badges" aria-label="Stack principal">
+                    <span class="badge">HTML</span>
+                    <span class="badge">CSS</span>
+                    <span class="badge">JavaScript</span>
+                    <span class="badge">C++</span>
+                    <span class="badge">Git</span>
+                    <span class="badge">Electroquímica</span>
+                </div>
             </section>
-            <section class="curriculum_perfil">
+            <section class="curriculum_perfil cv_card">
                 <h2>Perfil Profesional</h2>
-                <p>Estudiante de Química con interés en el desarrollo de software aplicado a la ciencia. Me encuentro en proceso de formación en programación científica (Python, C++) y desarrollo web (HTML, CSS, JavaScript), con certificaciones que respaldan mis avances. He participado en proyectos académicos relacionados con electroquímica y síntesis de materiales, lo que ha fortalecido mi curiosidad por integrar herramientas tecnológicas en entornos científicos. Busco combinar mis conocimientos en química con habilidades digitales para contribuir al desarrollo de soluciones innovadoras y accesibles para la investigación.</p>
+                <p>Estudiante de Química con interés en el desarrollo de software aplicado a la ciencia. Me encuentro en proceso de formación en programación científica (C++) y desarrollo web (HTML, CSS, JavaScript), con certificaciones que respaldan mis avances. He participado en proyectos académicos relacionados con electroquímica y síntesis de materiales, lo que ha fortalecido mi curiosidad por integrar herramientas tecnológicas en entornos científicos. Busco combinar mis conocimientos en química con habilidades digitales para contribuir al desarrollo de soluciones innovadoras y accesibles para la investigación.</p>
             </section>
-            <section class="curriculum_educacion">
+            <section class="curriculum_educacion cv_card">
                 <h2>Educación</h2>
                 <ul>
-                    <li><strong>Licenciatura en Química</strong><br>Benemérita Universidad Autónoma de Puebla<br>Enero de 2021 – Junio de 2026</li>
+                    <li>
+                        <strong>Licenciatura en Química</strong><br>
+                        Benemérita Universidad Autónoma de Puebla<br>
+                        Enero de 2021 – Junio de 2026
+                        <ul>
+                            <li><strong>Áreas de especialización:</strong> Química Analítica, Fisicoquímica, Química Orgánica & Química Inorgánica</li>
+                            <li><strong>Materias relevantes:</strong> Electroquímica, Química Computacional, Instrumentación Analítica, Síntesis Orgánica, Termodinámica Química</li>
+                            <li><strong>Proyectos de investigación:</strong> Electrólisis para síntesis de materiales nanoestructurados, Electrodecoloración de efluentes industriales</li>
+                            <li><strong>Competencias desarrolladas:</strong> Manejo de instrumentación científica, análisis de datos experimentales, síntesis y caracterización de materiales</li>
+                        </ul>
+                    </li>
                 </ul>
             </section>
-            <section class="curriculum_experiencia">
+            <section class="curriculum_experiencia cv_card">
                 <h2>Experiencia Profesional</h2>
                 <ul>
                     <li><strong>Representante de Fraude</strong><br>Teleperformance, México — Junio de 2023 - Actualidad
@@ -50,18 +81,28 @@
                     </li>
                 </ul>
             </section>
-            <section class="curriculum_habilidades">
+            <section class="curriculum_habilidades cv_card">
                 <h2>Habilidades Técnicas</h2>
                 <ul>
                     <li>HTML, CSS, JavaScript</li>
                     <li>Git y GitHub</li>
                     <li>Bash / Command Line</li>
-                    <li>Python, C++ (en contexto científico)</li>
-                    <li>Electroquímica, caracterización de materiales</li>
-                    <li>Productividad, enfoque y desarrollo personal</li>
+                    <li>Inteligencia Artificial</li>
+                    <li>Fisicoquímica y Termodinámica</li>
+                    <li>Química Analítica e Instrumental</li>
+                    <li>Síntesis Orgánica e Inorgánica</li>
+                    <li>Electroquímica y Caracterización de Materiales</li>
+                    <li>Espectroscopía (IR, UV-Vis, NMR)</li>
+                    <li>Cromatografía (HPLC, GC)</li>
+                    <li>Manejo de Instrumentación Especializada</li>
+                    <li>Análisis Deductivo e Inductivo</li>
+                    <li>Diseño y Optimización de Procesos</li>
+                    <li>Trabajo Colaborativo Multidisciplinario</li>
+                    <li>Tecnologías de Información y Comunicación</li>
+                    <li>Productividad y Desarrollo Personal</li>
                 </ul>
             </section>
-            <section class="curriculum_proyectos">
+            <section class="curriculum_proyectos cv_card">
                 <h2>Proyectos y Participaciones Académicas</h2>
                 <ul>
                     <li>Cartel: “Materiales Semiconductores” – Exposición de Carteles BUAP, mayo 2024</li>
@@ -69,7 +110,7 @@
                     <li>Investigación: “Síntesis de partículas de GaNxOy por electrólisis” – Haciendo Ciencia BUAP Primavera 2024</li>
                 </ul>
             </section>
-            <section class="curriculum_certificaciones">
+            <section class="curriculum_certificaciones cv_card">
                 <h2>Certificaciones y Cursos</h2>
 
                 <h3>Desarrollo Web</h3>
@@ -130,5 +171,6 @@
     <footer class="footer">
         <p>Desarrollado por Bruno Victoria</p>
     </footer>
+    <script src="theme.js" defer></script>
 </body>
 </html>

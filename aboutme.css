@@ -1,0 +1,360 @@
+/* About Me Page Specific Styles */
+
+/* Enhanced main presentation container */
+.presentacion {
+  padding: 2rem 1.5rem;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: 
+    radial-gradient(circle at 15% 25%, rgba(59,130,246,.08), transparent 50%),
+    radial-gradient(circle at 85% 75%, rgba(99,102,241,.06), transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(139,92,246,.04), transparent 60%);
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 
+    0 20px 60px rgba(0,0,0,.4),
+    0 0 0 1px rgba(255,255,255,.1) inset;
+}
+
+/* Light mode presentation background */
+body.light .presentacion {
+  background: 
+    radial-gradient(circle at 15% 25%, rgba(37,99,235,.12), transparent 50%),
+    radial-gradient(circle at 85% 75%, rgba(124,58,237,.1), transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(37,99,235,.06), transparent 60%);
+  box-shadow: 
+    0 15px 40px rgba(0,0,0,.1),
+    0 0 0 1px rgba(0,0,0,.05) inset;
+}
+
+/* Light mode title gradient */
+body.light .presentacion_contenido_titulo {
+  background: linear-gradient(135deg, var(--color-text) 20%, #2563eb 40%, #7c3aed 70%, #1e293b 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 30px rgba(37,99,235,.2);
+}
+
+/* Light mode description card */
+body.light .presentacion_contenido_descripcion {
+  color: #1e293b;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(37,99,235,.14), transparent 55%),
+    radial-gradient(circle at 80% 70%, rgba(124,58,237,.12), transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(37,99,235,.08), transparent 45%),
+    radial-gradient(circle at 60% 20%, rgba(124,58,237,.06), transparent 40%),
+    linear-gradient(135deg, rgba(248,250,254,.85), rgba(243,246,253,.9));
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 
+    0 6px 24px rgba(0,0,0,.08),
+    0 0 0 1px rgba(37,99,235,.03) inset;
+}
+
+body.light .presentacion_contenido_descripcion::before {
+  background: linear-gradient(90deg, transparent, rgba(37,99,235,.08), transparent);
+}
+
+/* Light mode image styling */
+body.light .presentacion_imagen_sobre_mi {
+  box-shadow: 
+    0 15px 40px rgba(0,0,0,.12),
+    0 0 0 1px rgba(0,0,0,.06) inset;
+}
+
+body.light .presentacion_imagen_sobre_mi::before {
+  background: linear-gradient(
+    135deg,
+    rgba(37,99,235,.08) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(124,58,237,.06) 100%
+  );
+}
+
+.presentacion::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(59,130,246,.02) 50%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* Enhanced content layout */
+.presentacion_contenido {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Enhanced title styling */
+.presentacion_contenido_titulo {
+  font-size: clamp(3rem, 2rem + 2vw, 43.5rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--color-text) 20%, #60a5fa 40%, #3b82f6 70%, #2563eb 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 40px rgba(59,130,246,.3);
+  position: relative;
+}
+
+.presentacion_contenido_titulo::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa, #3b82f6);
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(59,130,246,.4);
+  animation: pulse-underline 2s ease-in-out infinite;
+}
+
+@keyframes pulse-underline {
+  0%, 100% { opacity: 0.8; transform: scaleX(1); }
+  50% { opacity: 1; transform: scaleX(1.05); }
+}
+
+/* Enhanced description styling */
+.presentacion_contenido_descripcion {
+  font-size: clamp(1rem, 0.95rem + 0.5vw, 1.2rem);
+  line-height: 1.6;
+  color: rgba(255,255,255,.9);
+  margin-bottom: 1.5rem;
+  background: rgba(255,255,255,.02);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.08);
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 
+    0 8px 32px rgba(0,0,0,.3),
+    0 0 0 1px rgba(255,255,255,.05) inset;
+  position: relative;
+  overflow: hidden;
+  max-width: 700px;
+  width: 100%;
+}
+
+.presentacion_contenido_descripcion::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(59,130,246,.5), transparent);
+}
+
+.presentacion_contenido_descripcion::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.03), transparent);
+  transition: left 0.8s ease;
+}
+
+.presentacion_contenido_descripcion:hover::after {
+  left: 100%;
+}
+
+/* Enhanced image styling */
+.presentacion_imagen_sobre_mi {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 
+    0 20px 60px rgba(0,0,0,.4),
+    0 0 0 1px rgba(255,255,255,.1) inset;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.presentacion_imagen_sobre_mi::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(59,130,246,.1) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(99,102,241,.1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.presentacion_imagen_sobre_mi:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 30px 80px rgba(0,0,0,.5),
+    0 0 0 1px rgba(59,130,246,.3) inset;
+}
+
+.presentacion_imagen_sobre_mi:hover::before {
+  opacity: 1;
+}
+
+/* Mobile Media Queries */
+/* iPhone SE and similar small devices (max-width: 375px) */
+@media (max-width: 375px) {
+  .presentacion {
+    padding: 1rem 0.5rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+  
+  .presentacion_contenido {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    gap: 1rem;
+  }
+  
+  .presentacion_contenido_titulo {
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .presentacion_contenido_descripcion {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.2rem;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  .presentacion_imagen_sobre_mi {
+    order: 2;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    align-self: center;
+  }
+}
+
+/* General mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .presentacion {
+    padding: 1.5rem 0.75rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+  }
+  
+  .presentacion_contenido {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    gap: 1.25rem;
+  }
+  
+  .presentacion_contenido_titulo {
+    font-size: clamp(2rem, 5.5vw, 2.5rem);
+    text-align: center;
+    margin-bottom: 1.2rem;
+  }
+  
+  .presentacion_contenido_descripcion {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+  
+  .presentacion_imagen_sobre_mi {
+    order: 2;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    align-self: center;
+  }
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .presentacion_contenido {
+    max-width: 900px;
+    gap: 2.5rem;
+  }
+  
+  .presentacion_contenido_descripcion {
+    padding: 2rem 2.5rem;
+  }
+  
+  .presentacion_imagen_sobre_mi {
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .presentacion {
+    padding: 3rem 2rem;
+  }
+  
+  .presentacion_contenido {
+    max-width: 1000px;
+    gap: 3rem;
+  }
+  
+  .presentacion_contenido_descripcion {
+    max-width: 800px;
+  }
+  
+  .presentacion_imagen_sobre_mi {
+    max-width: 500px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .presentacion {
+    background: white;
+    color: black;
+  }
+  
+  .presentacion_contenido_titulo {
+    background: none;
+    color: #2563eb;
+    text-shadow: none;
+  }
+  
+  .presentacion_contenido_descripcion {
+    background: none;
+    border: 1px solid #e5e5e5;
+    color: black;
+  }
+  
+  .presentacion_imagen_sobre_mi {
+    box-shadow: none;
+    border: 1px solid #e5e5e5;
+  }
+}
