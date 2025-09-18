@@ -5,7 +5,7 @@
 :root {
 	--cv-col-gap: 2.2rem;
 	--cv-row-gap: 2.6rem;
-	--cv-accent: var(--color-accent, #3b82f6);
+	--cv-accent: var(--color-accent, #ffffff);
 	--cv-accent-alt: var(--color-accent-alt, #6366f1);
 	--cv-border: var(--color-border, #273041);
 	--cv-surface: var(--color-surface, #161a21);
@@ -391,15 +391,6 @@ main.curriculum_flex { width:min(100% - 2.4rem, var(--size-content)); margin: cl
 .curriculum_certificaciones h3:first-of-type {
   margin-top: .8rem;
 }
-
-/* Specific emojis for each section */
-.curriculum_certificaciones h3:nth-of-type(1)::before { content: "🌐"; } /* Desarrollo Web */
-.curriculum_certificaciones h3:nth-of-type(2)::before { content: "💻"; } /* Programación y Lógica */
-.curriculum_certificaciones h3:nth-of-type(3)::before { content: "🔧"; } /* Herramientas y Versionamiento */
-.curriculum_certificaciones h3:nth-of-type(4)::before { content: "🤖"; } /* Inteligencia Artificial */
-.curriculum_certificaciones h3:nth-of-type(5)::before { content: "⚡"; } /* Sistemas y Terminal */
-.curriculum_certificaciones h3:nth-of-type(6)::before { content: "📈"; } /* Productividad y Carrera */
-.curriculum_certificaciones h3:nth-of-type(7)::before { content: "🎓"; } /* Otros */
 
 .curriculum_certificaciones ul li {
   background: rgba(255,255,255,.03);
